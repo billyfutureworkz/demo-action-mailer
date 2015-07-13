@@ -5,7 +5,7 @@ class UserMailer < ApplicationMailer
     @user = user
     @url  = 'http://example.com/login'
     attachments['filename.jpg'] = {:mime_type => 'application/mymimetype',
-                                   :content => some_string }
+                                   :content => "this is a content" }
     mail(to: @user.email, subject: 'Welcome to My Awesome Site')
   end
 
