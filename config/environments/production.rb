@@ -85,8 +85,8 @@ Rails.application.configure do
     :address => "smtp.gmail.com",
     :port => "587",
     :domain => "demo-action-mailer.herokuapp.com",
-    :user_name => "billy@futureworkz.com",
-    :password => "hoasung0934786800",
+    :user_name => "secret",
+    :password => "secret",
     :authentication => "plain",
     :enable_starttls_auto => true
   } 
