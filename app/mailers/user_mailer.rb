@@ -1,0 +1,32 @@
+class UserMailer < ApplicationMailer
+   default from: 'notifications@example.com'
+
+  def welcome_email(user)
+    @user = user
+    @url  = 'http://example.com/login'
+    mail(to: @user.email, subject: 'Welcome to My Awesome Site')
+  end
+
+end
+
+
+# Sending Email To Multiple Recipients
+
+# class AdminMailer < ActionMailer::Base
+#   default to: Proc.new { Admin.pluck(:email) },
+#           from: 'notification@example.com'
+ 
+#   def new_registration(user)
+#     @user = user
+#     mail(subject: "New User Signup: #{@user.email}")
+#   end
+# end
+
+
+# Sending Email With Name
+
+# def welcome_email(user)
+#   @user = user
+#   email_with_name = %("#{@user.name}" <#{@user.email}>)
+#   mail(to: email_with_name, subject: 'Welcome to My Awesome Site')
+# end
